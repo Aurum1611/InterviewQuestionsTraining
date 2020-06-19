@@ -9,10 +9,19 @@ n >= r
 
 public class Permutation {
 
+    /**
+     * A method to calculate nP^r or permutation
+     *
+     * @param n int n from nP^r
+     * @param r int r from nP^r
+     * @return The final value after calculating nP^r
+     * @throws IllegalArgumentException when n < r or n < 1 or r < 1 or n > 20 or r > 20
+     * @author Neeyat Lotlikar
+     */
     public static long permutation(int n, int r) {
-        if (n < r) throw new ArithmeticException("n cannot be less than r");
-        if (n < 1 || r < 1) throw new ArithmeticException("n and r cannot have negative values");
-        if (n > 20 || r > 20) throw new ArithmeticException("n and r must have values less than or equal to 20");
+        if (n < r) throw new IllegalArgumentException("n cannot be less than r");
+        if (n < 1 || r < 1) throw new IllegalArgumentException("n and r cannot have negative values");
+        if (n > 20 || r > 20) throw new IllegalArgumentException("n and r must have values less than or equal to 20");
 
         int stop = n - r; // Calculates the number which gets divided and so the multiplication must happen till that number
 
