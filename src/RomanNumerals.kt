@@ -1,5 +1,7 @@
 // Issue #1: Write a function that takes in a number from 1 to 1000 and returns that number in Roman Numerals.
 
+class InputOutOfRangeException : IllegalArgumentException()
+
 fun getRomanNumerals(num: Int): String {
     val digits = num.toString().reversed().toCharArray()
     var romanNumber = ""
